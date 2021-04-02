@@ -39,6 +39,7 @@ main {
     left: 20px;
     outline: 1rem;
     transition: 0.2s ease-in;
+    background-color: rgb(169, 169, 255);
 }
 .newGameButton:hover {
     box-shadow: -6px 6px 4px 2px rgba(0, 0, 0, 0.253);

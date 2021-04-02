@@ -28,9 +28,8 @@ function makeNewGrid() {
 }
 
 function checkKey(e) {
-
     e = e || window.event;
-sajdfhkp
+
     if (e.keyCode == '38') {
       console.log("up")
     }
