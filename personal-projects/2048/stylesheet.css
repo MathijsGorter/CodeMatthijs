@@ -16,13 +16,14 @@ main {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: min(1vh, 1vw);
+  grid-gap: min(2vh, 2vw);
   height: min(100vh, 100vw);
   width: min(100vh, 100vw);
   transform: scale(0.7);
   border-radius: min(3vh, 3vw);
   overflow: hidden;
-  /* border: 5px solid rgb(0, 0, 0); */
+  background: rgb(187, 187, 187);
+  border: min(2vh, 2vw) solid rgb(187, 187, 187);
 }
 
 .cel {
@@ -34,7 +35,7 @@ main {
   place-items: center;
 
   background-color: #be9a22;
-  border-radius: min(0.5vh, 0.5vw);
+  border-radius: min(3vh, 3vw);
   /* border: 5px solid rgb(0, 0, 0); */
 }
 
@@ -49,7 +50,6 @@ main {
   position: absolute;
   top: 20px;
   left: 20px;
-  outline: 1rem;
 	transition: 0.3s cubic-bezier(.82,.08,.23,1.01);
   background-color: rgb(169, 169, 255);
 }

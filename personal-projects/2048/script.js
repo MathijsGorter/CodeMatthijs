@@ -2,25 +2,21 @@ var grid = [
   [2, 2, 3, 5],
   [1, 3, 4, 5],
   [2, 3, 4, 5],
-  [2, 4, 5, 6],
+  [2, 4, 5, 6]
 ];
 
 makeNewGrid();
 
 function makeNewGrid() {
-  for (let colums = 1; colums < 5; colums++) {
-    grid[colums - 1] = [];
-    for (let row = 1; row < 5; row++) {
-      let randomNumber = Math.floor(Math.random() * 100);
-      if (randomNumber < 60) {
-        grid[colums - 1].push(0);
-      } else if (randomNumber < 85) {
-        grid[colums - 1].push(2);
-      } else {
-        grid[colums - 1].push(4);
-      }
-    }
-  }
+  grid = [
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
+  ];
+  makeNewCel();
+  makeNewCel();
+  makeNewCel();
   upDateUI();
 }
 
@@ -29,6 +25,7 @@ function upDateUI() {
   for (let rows = 1; rows < 5; rows++) {
     for (let colums = 1; colums < 5; colums++) {
       if (!grid[colums - 1][rows - 1] == 0) {
+        // document.getElementById(colums + "-" + rows).style.background = "#f3f3f3";
         document.getElementById(colums + "-" + rows).innerHTML = grid[colums - 1][rows - 1];
       } else {
         document.getElementById(colums + "-" + rows).innerHTML = ""
@@ -61,6 +58,7 @@ function moveleft() {
         if (pEmthyCel < cel) {
           if (!grid[colum][cel] == 0 ) {
             if (grid[colum][pEmthyCel] == 0) {
+
               grid[colum][pEmthyCel] = grid[colum][cel];
               grid[colum][cel] = 0;
               console.log(
@@ -82,6 +80,7 @@ function moveleft() {
 }
 
 function makeNewCel() {
+  
   while (true) {
     let row = Math.floor(Math.random() * 4);
     let column = Math.floor(Math.random() * 4);
